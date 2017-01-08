@@ -7,32 +7,32 @@ namespace CubeSummation
 {
     public class CRUD
     {
-        BloquesAsignados bloques = new BloquesAsignados();
+        
 
-        public void create(int x, int y, int z, double w) {
+        public void create(int x, int y, int z, double w, List<Punto> bloques) {
 
-            Punto p1 = read(x, y, z);
+            Punto p1 = read(x, y, z, bloques);
             if (p1 == null)
             {
                 Punto p = new Punto(x, y, z, w);
-                bloques.Lpunto.Add(p);
+                bloques.Add(p);
             }
             else {
-                update(x,y,z,w);
+                update(x,y,z,w, bloques);
             }
 
         }
 
-        public Punto read(int x1, int y1, int z1) {
-            Punto p = bloques.Lpunto.Find(x => x.x == x1 && x.y == y1 && x.z == z1);
+        public Punto read(int x1, int y1, int z1, List<Punto> bloques) {
+            Punto p = bloques.Find(x => x.x == x1 && x.y == y1 && x.z == z1);
             return p;            
         }
 
-        public Punto update(int x1, int y1, int z1, double w1) {
+        public Punto update(int x1, int y1, int z1, double w1, List<Punto> bloques) {
 
-            bloques.Lpunto.Find(x => x.x == x1 && x.y == y1 && x.z == z1).w = w1;
+            bloques.Find(x => x.x == x1 && x.y == y1 && x.z == z1).w = w1;
 
-            return bloques.Lpunto.Find(x => x.x == x1 && x.y == y1 && x.z == z1);
+            return bloques.Find(x => x.x == x1 && x.y == y1 && x.z == z1);
         }
 
         public void delete() {

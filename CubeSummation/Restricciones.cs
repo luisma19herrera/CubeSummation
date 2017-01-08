@@ -7,7 +7,7 @@ namespace CubeSummation
 {
     public class Restricciones
     {
-        bool validaT(int t) {
+        public bool validaT(int t) {
             bool sw = false;
             if (t >= 1 && t <= 50)
             {
@@ -20,7 +20,7 @@ namespace CubeSummation
             return sw;
         }
 
-        bool validaN(int n) {
+        public bool validaN(int n) {
 
             bool sw = false;
 
@@ -36,7 +36,7 @@ namespace CubeSummation
             return sw;
         }
 
-        bool validaM(int m)
+        public bool validaM(int m)
         {
 
             bool sw = false;
@@ -53,7 +53,7 @@ namespace CubeSummation
             return sw;
         }
 
-        bool validaPuntos(int punto1, int punto2, int n) {
+        public bool validaPuntos(int punto1, int punto2, int n) {
             bool sw = false;
 
             if (punto1 >= 1 && punto2 >= punto1 && punto2 <= n)
@@ -68,7 +68,7 @@ namespace CubeSummation
         }
 
 
-        bool validaCoordenadas(int x, int y, int z, int n) {
+        public bool validaCoordenadas(int x, int y, int z, int n) {
             bool sw = false;
 
             if (x >= 1 && x <= n && y >= 1 && y <= n && z >= 1 && z <= n)
@@ -82,7 +82,7 @@ namespace CubeSummation
             return sw;
         }
 
-        bool validarW(double w) {
+        public bool validarW(double w) {
             double valorInferior = Math.Pow(-10,9);
             double valorSuperior = Math.Pow(10, 9);
             bool sw = false;
@@ -98,7 +98,7 @@ namespace CubeSummation
             return sw;
         }
 
-        bool validaBloques(Punto p0, Punto p1, Punto p2) {
+        public bool validaBloques(Punto p0, Punto p1, Punto p2) {
             bool sw = false;
 
             if (p1.x <= p0.x && p0.x <= p2.x && p1.y <= p0.y && p0.y <= p2.y && p1.z <= p0.z && p0.z <= p2.z)
