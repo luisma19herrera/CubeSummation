@@ -26,79 +26,33 @@ namespace CubeSummation
         {
             string resultado = "";
 
-
-            //if (contadorP < cont.t)
-            //{
-            //    if (contadorO < cont.m)
-            //    {
-            //        cont.update(x, y, z, w);
-            //        contadorO = contadorO + 1;
-            //        resultado = "Guardado";
-            //    }
-            //    else {
-            //        if (contadorP == cont.t - 1) {
-            //            contadorO = 0;
-            //            cont.bloques.Lpunto.Clear();
-            //            contadorP = contadorP + 1;
-            //        }
-
-            //    }                
-
-            //    // resultado = "No Guardado";
-            //}
-            //else {
-            //    resultado = "Fin de la Prueba";
-            //}
-
-            //if (contadorO >= cont.m && contadorP >= cont.t -1)
-            //{
-            //    resultado = "Fin de la Prueba";
-            //}
-            //else {
-            //    if (contadorP == cont.t-1 && contadorO <= cont.m)
-            //    {
-            //        cont.update(x, y, z, w);
-            //        contadorO = contadorO + 1;
-            //        resultado = "Guardado";
-            //    }
-            //    else {
-            //        if (contadorP <= cont.t-1 && contadorO == cont.m )
-            //        {
-            //            contadorO = 0;
-            //            cont.bloques.Lpunto.Clear();
-            //            contadorP = contadorP + 1;
-
-            //            cont.update(x, y, z, w);
-            //            contadorO = contadorO + 1;
-            //            resultado = "Guardado";
-            //        }
-            //        else {
-            //            cont.update(x, y, z, w);
-            //            contadorO = contadorO + 1;
-            //            resultado = "Guardado";
-            //        }
-            //    }
-            //}
-
-            if (contadorP <= cont.t - 1)
+            if (cont.m != 0 && cont.t != 0 && cont.n != 0)
             {
-                if (contadorO <= cont.m - 1)
+                if (contadorP <= cont.t - 1)
                 {
-                    cont.update(x, y, z, w);
-                    contadorO = contadorO + 1;
-                    resultado = "Guardado";
+                    if (contadorO <= cont.m - 1)
+                    {
+                        cont.update(x, y, z, w);
+                        contadorO = contadorO + 1;
+                        resultado = "Guardado";
+                    }
+                    else
+                    {
+                        contadorO = 0;
+                        cont.bloques.Lpunto.Clear();
+                        contadorP = contadorP + 1;
+                        resultado = "Fin de la prueba " + contadorP;
+                    }
                 }
                 else
                 {
-                    contadorO = 0;
-                    cont.bloques.Lpunto.Clear();
-                    contadorP = contadorP + 1;
-                    resultado = "Fin de la prueba " + contadorP;
+                    resultado = "Fin de todas las pruebas";
                 }
             }
             else {
-                resultado = "Fin de todas las pruebas";
+                resultado = "Debe inicializar las variables T,N,M para continuar";
             }
+            
                
             return resultado;
             
@@ -108,26 +62,33 @@ namespace CubeSummation
         public static string query(int x1, int y1, int z1, int x2, int y2, int z2)
         {
             string resultado = "";
-            if (contadorO < cont.m)
+            if (cont.m != 0 && cont.t != 0 && cont.n != 0)
             {
-                cont.query(x1, y1, z1, x2, y2, z2);
-                contadorO = contadorO + 1;
-                resultado = "Guardado";
-            }
-            else
-            {
-                if (contadorP < cont.t)
+                if (contadorP <= cont.t - 1)
                 {
-                    contadorP = contadorP + 1;
-                    contadorO = 0;
-                    cont.bloques.Lpunto.Clear();
-                    // resultado = "No Guardado";
+                    if (contadorO <= cont.m - 1)
+                    {
+                        cont.query(x1, y1, z1, x2, y2, z2);
+                        contadorO = contadorO + 1;
+                        resultado = "Guardado";
+                    }
+                    else
+                    {
+                        contadorO = 0;
+                        cont.bloques.Lpunto.Clear();
+                        contadorP = contadorP + 1;
+                        resultado = "Fin de la prueba " + contadorP;
+                    }
                 }
                 else
                 {
-                    resultado = "Fin de la Prueba";
+                    resultado = "Fin de todas las pruebas";
                 }
             }
+            else {
+                resultado = "Debe inicializar las variables T,N,M para continuar";
+            }
+            
             return resultado;
         }
 

@@ -119,112 +119,140 @@
 			</div>
 		</div>
 	</div>--%>
-     <div class="container">
-        <div class="row">
-            
-           <form id="mainForm">
-               <div class="col-sm-3">
-                   <label for="variableT">Ingresar variable T:</label>
-                   <input type="number" class="form-control" id="variableT" placeholder="Ingresar variable T">
-               </div>
-               <div class="col-sm-3">
-                   <label for="variableN">Ingresar variable N:</label>
-                   <input type="number" class="form-control" id="variableN" placeholder="Ingresar variable N">
-               </div>
-               <div class="col-sm-3">
-                   <label for="variableM">Ingresar variable M:</label>
-                   <input type="number" class="form-control" id="variableM" placeholder="Ingresar variable M">
-               </div>
-               <div class="row">
+    <section>
+        <div class="container">
+            <header>
+                <div>
+                    <h1>Cube Summation</h1>
+                </div>
+            </header>
+        </div>
+    </section>
 
-               </div>
-               <div class="col-sm-3">
-                  
-                   <a href="#" class="btn btn-default" onclick="javascript:CallAJAX();">Submit</a>
-               </div>               
-           </form>                
-           
+    <section>
+        <div class="container">
+            <form id="mainForm" style="padding:2%;">
+                   <div class="row">
+                       <div class="col-sm-3">
+                           <label for="variableT">Ingresar variable T:</label>
+                           <input type="number" class="form-control" id="variableT" placeholder="Ingresar variable T" required="required">
+                       </div>
+                       <div class="col-sm-3">
+                           <label for="variableN">Ingresar variable N:</label>
+                           <input type="number" class="form-control" id="variableN" placeholder="Ingresar variable N" required="required">
+                       </div>
+                       <div class="col-sm-3">
+                           <label for="variableM">Ingresar variable M:</label>
+                           <input type="number" class="form-control" id="variableM" placeholder="Ingresar variable M" required="required">
+                       </div>
+                   </div>
+                   
+                   <div class="row">
+                       <div class="col-sm-3" style="margin-top:2%;">                  
+                           <a href="#" class="btn btn-success" onclick="javascript:CallAJAX();">Submit</a>
+                       </div>               
+                   </div>
+                   
+               </form>
             
         </div>
-
-             <ul class="nav nav-tabs">
-    <li class="active"><a href="#home">Update</a></li>
-    <li><a href="#menu1">Query</a></li>
+    </section>
     
-    
-  </ul>
+    <section>
+        <div class ="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home">Update</a></li>
+                        <li><a href="#menu1">Query</a></li>
+      
+                     </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <form id="formUpdate">
-               <div class="col-sm-3">
-                   <label for="x">Ingresar X:</label>
-                   <input type="number" class="form-control" id="x" required="required">
-               </div>
-               <div class="col-sm-3">
-                   <label for="y">Ingresar Y:</label>
-                   <input type="number" class="form-control" id="y" required="required">
-               </div>
-               <div class="col-sm-3">
-                   <label for="z">Ingresar Z</label>
-                   <input type="number" class="form-control" id="z" required="required">
-               </div>
+    <section>
+        <div class="container">
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active" style ="padding:2%;>
+                  <form id="formUpdate">
+                           <div class="col-sm-3">
+                               <label for="x">Ingresar X:</label>
+                               <input type="number" class="form-control" id="x" required="required">
+                           </div>
+                           <div class="col-sm-3">
+                               <label for="y">Ingresar Y:</label>
+                               <input type="number" class="form-control" id="y" required="required">
+                           </div>
+                           <div class="col-sm-3">
+                               <label for="z">Ingresar Z</label>
+                               <input type="number" class="form-control" id="z" required="required">
+                           </div>
 
-          <div class="col-sm-3">
-                   <label for="w">Ingresar W</label>
-                   <input type="number" class="form-control" id="w" required="required">
-               </div>
-               <div class="row">
+                      <div class="col-sm-3">
+                               <label for="w">Ingresar W</label>
+                               <input type="number" class="form-control" id="w" required="required">
+                           </div>
+                           <div class="row">
 
-               </div>
-               <div class="col-sm-3">
+                           </div>
+                           <div class="col-sm-3" style="margin-top:2%;">
                   
-                   <a href="#" class="btn btn-default" onclick="javascript:Update();">Update</a>
-               </div>               
-           </form>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-     <form id="formQuery">
-               <div class="col-sm-4">
-                   <label for="x1">Ingresar X1:</label>
-                   <input type="number" class="form-control" id="x1" required="required">
-               </div>
-               <div class="col-sm-4">
-                   <label for="y1">Ingresar Y1:</label>
-                   <input type="number" class="form-control" id="y1" required="required">
-               </div>
-               <div class="col-sm-4">
-                   <label for="z1">Ingresar Z1</label>
-                   <input type="number" class="form-control" id="z1" required="required">
-               </div>
+                               <a href="#" class="btn btn-success" onclick="javascript:Update();">Update</a>
+                           </div>               
+                       </form>
+                </div>
+            <div id="menu1" class="tab-pane fade">
+             <form id="formQuery" style ="padding:2%;">
+                       <div class="col-sm-4">
+                           <label for="x1">Ingresar X1:</label>
+                           <input type="number" class="form-control" id="x1" required="required">
+                       </div>
+                       <div class="col-sm-4">
+                           <label for="y1">Ingresar Y1:</label>
+                           <input type="number" class="form-control" id="y1" required="required">
+                       </div>
+                       <div class="col-sm-4">
+                           <label for="z1">Ingresar Z1</label>
+                           <input type="number" class="form-control" id="z1" required="required">
+                       </div>
 
-         <div class="col-sm-4">
-                   <label for="x2">Ingresar X2:</label>
-                   <input type="number" class="form-control" id="x2" required="required">
-               </div>
-               <div class="col-sm-4">
-                   <label for="y2">Ingresar Y2:</label>
-                   <input type="number" class="form-control" id="y2" required="required">
-               </div>
-               <div class="col-sm-4">
-                   <label for="z2">Ingresar Z2</label>
-                   <input type="number" class="form-control" id="z2" required="required">
-               </div>
-               <div class="col-sm-3">
+                 <div class="col-sm-4">
+                           <label for="x2">Ingresar X2:</label>
+                           <input type="number" class="form-control" id="x2" required="required">
+                       </div>
+                       <div class="col-sm-4">
+                           <label for="y2">Ingresar Y2:</label>
+                           <input type="number" class="form-control" id="y2" required="required">
+                       </div>
+                       <div class="col-sm-4">
+                           <label for="z2">Ingresar Z2</label>
+                           <input type="number" class="form-control" id="z2" required="required">
+                       </div>
+                       <div class="col-sm-4" style="margin-top:2%;">
                   
-                   <a href="#" class="btn btn-default" onclick="javascript:Query();">Query</a>
-               </div>    
+                           <a href="#" class="btn btn-success" onclick="javascript:Query();">Query</a>
+                       </div>    
          
-             <div class="col-sm-3">
+                     <div class="col-sm-4" style="margin-top:2%;">
                   
-                   <a href="#" class="btn btn-default" onclick="javascript:Resultado();">Resultados</a>
-               </div>               
-           </form>
-    </div>
+                           <a href="#" class="btn btn-success" onclick="javascript:Resultado();">Resultados</a>
+                       </div>               
+                   </form>
+            </div>
+        </div>
+    </section>
+        
+
+             
+
+  
     
   </div>
 
-    </div>
+
    
     <script>
 $(document).ready(function(){
