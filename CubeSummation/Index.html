@@ -4,8 +4,62 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 	<meta charset="utf-8" />
+
+<link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.2.3.min.js"></script>
+
+    <script type="text/javascript">
+        function CallAJAX() {
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: 'Index.aspx/GetDataEstados',
+                data: '{}',
+                success:
+                    function (response) {
+                        drawChart(response.d);
+                    }
+            });
+        }
+    </script>
 </head>
 <body>
 
+    <div class="container">
+        <div class="row">
+            
+           <form>
+               <div class="col-sm-3">
+                   <label for="variableT">Ingresar variable T:</label>
+                   <input type="text" class="form-control" id="variableT" placeholder="Ingresar variable T">
+               </div>
+               <div class="col-sm-3">
+                   <label for="variableN">Ingresar variable N:</label>
+                   <input type="text" class="form-control" id="variableN" placeholder="Ingresar variable N">
+               </div>
+               <div class="col-sm-3">
+                   <label for="variableM">Ingresar variable M:</label>
+                   <input type="text" class="form-control" id="variableM" placeholder="Ingresar variable M">
+               </div>
+               <div class="row">
+
+               </div>
+               <div class="col-sm-3">
+                  
+                   <button type="submit" class="btn btn-default">Submit</button>
+               </div>
+               
+           </form>
+           
+                
+           
+            
+        </div>
+    </div>
+   
+
+    <script src="Scripts/bootstrap.js"></script>
 </body>
+
 </html>
